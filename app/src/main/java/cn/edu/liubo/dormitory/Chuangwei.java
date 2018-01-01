@@ -36,7 +36,7 @@ public class Chuangwei extends Activity implements View.OnClickListener{
     private int gender;
     private HttpURLConnection conn;
     private static final int CHUANGWEISHU =1;
-    private int errcode=1;//gygy
+    private int errcode=1;//gygyf
     private String data;
     ArrayAdapter<String> adapter;
     private ListView mList;
