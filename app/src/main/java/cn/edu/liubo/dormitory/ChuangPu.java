@@ -67,7 +67,7 @@ public class ChuangPu extends Activity implements View.OnClickListener{
             finish();
         }
     }
-    private void initViews(){
+    private void initViews(){   //测试GitHub
         //获取登陆人性别
         SharedPreferences sharedPreferences=getSharedPreferences("config",MODE_PRIVATE);
         String xingbie=sharedPreferences.getString("xingBie","");
