@@ -8,7 +8,7 @@ package cn.edu.liubo.dormitory;
         import android.app.Activity;
         import android.content.Intent;
         import android.content.SharedPreferences;
-        import android.os.Bundle;
+        import android.os.Bundle;//ffff
         import android.os.Handler;
         import android.os.Message;
         import android.support.annotation.Nullable;
