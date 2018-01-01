@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".LogIn">
+        <activity android:name=".denglu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -20,13 +20,13 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".ChuangPu">
+        <activity android:name=".Chuangwei">
 
         </activity>
-        <activity android:name=".TogetherSlelect" >
+        <activity android:name=".tongzhuslelect" >
 
         </activity>
-        <activity android:name=".Dormitorys">
+        <activity android:name=".sushe">
 
         </activity>
     </application>

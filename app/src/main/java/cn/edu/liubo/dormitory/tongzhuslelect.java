@@ -10,13 +10,11 @@ package cn.edu.liubo.dormitory;
         import android.widget.EditText;
         import android.widget.ImageView;
 
-        import cn.edu.liubo.dormitory.R;
-
 /**
  * Created by joaming on 2017/12/12.
  */
 
-public class TogetherSlelect extends Activity implements View.OnClickListener{
+public class tongzhuslelect extends Activity implements View.OnClickListener{
     private ImageView backForward,nextBut2;
 
     private EditText xueHao1,xueHao2,xueHao3,xueHao4,yanZhengma1,yanZhengma2,yanZhengma3,yanZhengma4;
@@ -26,7 +24,7 @@ public class TogetherSlelect extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.togetherselect);
+        setContentView(R.layout.tongzhuslelect);
 
         backForward=(ImageView)findViewById(R.id.backforward1);
         backForward.setOnClickListener(this);
@@ -54,7 +52,7 @@ public class TogetherSlelect extends Activity implements View.OnClickListener{
             editor.commit();
 
             //跳转到页
-            Intent intent = new Intent(TogetherSlelect.this, MainActivity.class);
+            Intent intent = new Intent(tongzhuslelect.this, MainActivity.class);
             startActivity(intent);
             //关闭当前界面
             finish();
@@ -130,7 +128,7 @@ public class TogetherSlelect extends Activity implements View.OnClickListener{
         }
         if(v.getId()==R.id.next2){
             //跳转到页
-            Intent intent = new Intent(TogetherSlelect.this, Dormitorys.class);
+            Intent intent = new Intent(tongzhuslelect.this, sushe.class);
             startActivity(intent);
         }
 

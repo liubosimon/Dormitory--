@@ -16,7 +16,6 @@ package cn.edu.liubo.dormitory;
         import android.widget.ArrayAdapter;
         import android.widget.ImageView;
         import android.widget.ListView;
-        import android.widget.TextView;
 
         import org.json.JSONException;
         import org.json.JSONObject;
@@ -28,13 +27,11 @@ package cn.edu.liubo.dormitory;
         import java.net.MalformedURLException;
         import java.net.URL;
 
-        import cn.edu.liubo.dormitory.R;
-
 /**
  * Created by joaming on 2017/12/12.
  */
 
-public class ChuangPu extends Activity implements View.OnClickListener{
+public class Chuangwei extends Activity implements View.OnClickListener{
     private ImageView titleBack;
     private int gender;
     private HttpURLConnection conn;
@@ -47,7 +44,7 @@ public class ChuangPu extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.chuangpu);
+        setContentView(R.layout.chuangwei);
 
         titleBack=(ImageView)findViewById(R.id.title_back);
         titleBack.setOnClickListener(this);
@@ -61,7 +58,7 @@ public class ChuangPu extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         if(v.getId()==R.id.title_back){
             //跳转到页
-            Intent intent = new Intent(ChuangPu.this, MainActivity.class);
+            Intent intent = new Intent(Chuangwei.this, MainActivity.class);
             startActivity(intent);
             //关闭当前界面
             finish();
@@ -142,7 +139,7 @@ public class ChuangPu extends Activity implements View.OnClickListener{
 
                         mList=(ListView)findViewById(R.id.title_list);
                         adapter=new ArrayAdapter<String>(
-                                ChuangPu.this,android.R.layout.simple_list_item_1,chuanweidata);
+                                Chuangwei.this,android.R.layout.simple_list_item_1,chuanweidata);
                         mList.setAdapter(adapter);
 
 

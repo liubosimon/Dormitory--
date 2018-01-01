@@ -14,7 +14,6 @@ package cn.edu.liubo.dormitory;
         import android.support.annotation.Nullable;
         import android.util.Log;
         import android.view.View;
-        import android.widget.Button;
         import android.widget.EditText;
         import android.widget.Toast;
 
@@ -24,33 +23,16 @@ package cn.edu.liubo.dormitory;
         import org.json.JSONObject;
 
         import java.io.BufferedReader;
-        import java.io.ByteArrayOutputStream;
-        import java.io.IOException;
         import java.io.InputStream;
         import java.io.InputStreamReader;
-        import java.io.OutputStream;
         import java.net.HttpURLConnection;
-        import java.net.MalformedURLException;
-        import java.net.ProtocolException;
         import java.net.URL;
-        import java.net.URLEncoder;
-        import java.util.concurrent.TimeUnit;
-
-        import javax.net.ssl.HostnameVerifier;
-        import javax.net.ssl.SSLSession;
-
-        import cn.edu.liubo.dormitory.R;
-        import okhttp3.Call;
-        import okhttp3.Callback;
-        import okhttp3.OkHttpClient;
-        import okhttp3.Request;
-        import okhttp3.Response;
 
 /**
  * Created by joaming on 2017/11/16.
  */
 
-public class LogIn extends Activity implements View.OnClickListener {
+public class denglu extends Activity implements View.OnClickListener {
     private EditText mAccount;
     private EditText mPWD;
     private View mLogin;
@@ -63,7 +45,7 @@ public class LogIn extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.log_in);
+        setContentView(R.layout.denglu);
         // 获取存储的数据
         SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
 
@@ -93,16 +75,16 @@ public class LogIn extends Activity implements View.OnClickListener {
                 Log.d("mydenglu", "网络OK");
             } else {
                 Log.d("mydenglu", "网络挂了");
-                Toast.makeText(LogIn.this, "网络挂了！", Toast.LENGTH_LONG).show();
+                Toast.makeText(denglu.this, "网络挂了！", Toast.LENGTH_LONG).show();
             }
             //进行验证
             if (name.length()<=0 && password.length()<=0) {
 
-                Toast.makeText(LogIn.this, "用户名或密码为空", Toast.LENGTH_SHORT).show();
+                Toast.makeText(denglu.this, "用户名或密码为空", Toast.LENGTH_SHORT).show();
             } else if (name.length()<=0) {
-                Toast.makeText(LogIn.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
+                Toast.makeText(denglu.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
             } else if (password.length()<=0) {
-                Toast.makeText(LogIn.this, "密码不能为空", Toast.LENGTH_SHORT).show();
+                Toast.makeText(denglu.this, "密码不能为空", Toast.LENGTH_SHORT).show();
             } else if (name != null && password != null) {
 
                 // 存储学号和姓名
@@ -141,12 +123,12 @@ public class LogIn extends Activity implements View.OnClickListener {
                         editor.putInt("logInFlag", 0);
                         editor.commit();
                         //实现界面的跳转
-                        Intent intent = new Intent(LogIn.this, MainActivity.class);
+                        Intent intent = new Intent(denglu.this, MainActivity.class);
                         startActivity(intent);
                         //关闭当前界面
                         finish();
                     } else {
-                        Toast.makeText(LogIn.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(denglu.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 default:

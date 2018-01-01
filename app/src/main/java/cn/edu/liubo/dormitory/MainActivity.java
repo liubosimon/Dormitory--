@@ -27,8 +27,6 @@ package cn.edu.liubo.dormitory;
         import java.net.MalformedURLException;
         import java.net.URL;
 
-        import cn.edu.liubo.dormitory.R;
-
 /**
  * Created by joaming on 2017/10/27.
  */
@@ -184,7 +182,7 @@ public class MainActivity extends Activity implements ViewStub.OnClickListener{
             editor.commit();
 
             //跳转到登陆页
-            Intent intent = new Intent(MainActivity.this, LogIn.class);
+            Intent intent = new Intent(MainActivity.this, denglu.class);
             startActivity(intent);
             //关闭当前界面
             finish();
@@ -192,13 +190,13 @@ public class MainActivity extends Activity implements ViewStub.OnClickListener{
 
         if(v.getId()==R.id.search_button){
             //跳转到页
-            Intent intent = new Intent(MainActivity.this, ChuangPu.class);
+            Intent intent = new Intent(MainActivity.this, Chuangwei.class);
             startActivity(intent);
 
         }
         if(v.getId()==R.id.next1){
             //跳转到页
-            Intent intent = new Intent(MainActivity.this, TogetherSlelect.class);
+            Intent intent = new Intent(MainActivity.this, tongzhuslelect.class);
             startActivity(intent);
         }
 

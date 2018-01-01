@@ -33,15 +33,11 @@ package cn.edu.liubo.dormitory;
         import java.util.HashMap;
         import java.util.Map;
 
-        import cn.edu.liubo.dormitory.R;
-
-        import static android.R.color.black;
-
 /**
  * Created by joaming on 2017/12/13.
  */
 
-public class Dormitorys extends Activity implements View.OnClickListener{
+public class sushe extends Activity implements View.OnClickListener{
     private ImageView backForward2,nextBtn3;
     private TextView dorm5,dorm8,dorm9,dorm13,dorm14;
     private  HttpURLConnection conn;
@@ -50,7 +46,7 @@ public class Dormitorys extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dormitorys);
+        setContentView(R.layout.sushe);
 
         backForward2=(ImageView)findViewById(R.id.backforward2);
         backForward2.setOnClickListener(this);
@@ -78,7 +74,7 @@ public class Dormitorys extends Activity implements View.OnClickListener{
             editor.putInt("Dormitory",0);
             editor.commit();
             //跳转到页
-            Intent intent = new Intent(Dormitorys.this, TogetherSlelect.class);
+            Intent intent = new Intent(sushe.this, tongzhuslelect.class);
             startActivity(intent);
             //关闭当前界面
             finish();
@@ -252,13 +248,13 @@ public class Dormitorys extends Activity implements View.OnClickListener{
                         JSONObject obj = new JSONObject(responseStr);
                         errcode = obj.getInt("errcode");
                         if(errcode==0){
-                            Toast.makeText(Dormitorys.this, "选宿舍成功", Toast.LENGTH_LONG).show();
+                            Toast.makeText(sushe.this, "选宿舍成功", Toast.LENGTH_LONG).show();
                             //跳转到页
-                            Intent intent = new Intent(Dormitorys.this, MainActivity.class);
+                            Intent intent = new Intent(sushe.this, MainActivity.class);
                             startActivity(intent);
                             finish();
                         }else{
-                            Toast.makeText(Dormitorys.this, "选宿舍失败，请重新选宿舍", Toast.LENGTH_LONG).show();
+                            Toast.makeText(sushe.this, "选宿舍失败，请重新选宿舍", Toast.LENGTH_LONG).show();
                         }
 
 
