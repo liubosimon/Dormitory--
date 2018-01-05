@@ -10,7 +10,7 @@ android {
     }
     defaultConfig {
         applicationId "cn.edu.liubo.dormitory"
-        minSdkVersion 18
+        minSdkVersion 20
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
